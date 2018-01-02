@@ -16,6 +16,9 @@
 
 LOCAL_PATH := device/xiaomi/tissot
 
+# Build a separate vendor.img
+TARGET_COPY_OUT_VENDOR := vendor
+
 TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
 
 # Architecture
@@ -195,6 +198,8 @@ USE_SENSOR_MULTI_HAL := true
 
 # SELinux
 #include device/qcom/sepolicy/sepolicy.mk
+
+BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 
 # Wi-Fi
 BOARD_HAS_QCOM_WLAN := true
