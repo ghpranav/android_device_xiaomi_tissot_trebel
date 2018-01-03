@@ -1,4 +1,4 @@
-#!/system/bin/sh
+#!/vendor/bin/sh
 # Copyright (c) 2009-2016, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -97,9 +97,9 @@ start_msm_irqbalance()
 
 start_copying_prebuilt_qcril_db()
 {
-    if [ -f /system/vendor/qcril.db -a ! -f /data/misc/radio/qcril.db ]; then
-        cp /system/vendor/qcril.db /data/misc/radio/qcril.db
-        chown -h radio.radio /data/misc/radio/qcril.db
+    if [ -f /vendor/qcril.db -a ! -f /data/vendor/radio/qcril.db ]; then
+        cp /vendor/qcril.db /data/vendor/radio/qcril.db
+        chown -h radio.radio /data/vendor/radio/qcril.db
     fi
 }
 
@@ -337,7 +337,7 @@ cp /firmware/image/modem_pr/mbn_oin.txt /data/misc/radio/modem_config
 chown radio.radio /data/misc/radio/modem_config/mbn_oin.txt
 cp /firmware/image/modem_pr/mbn_ogl.txt /data/misc/radio/modem_config
 chown radio.radio /data/misc/radio/modem_config/mbn_ogl.txt
-echo 1 > /data/misc/radio/copy_complete
+echo 1 > /data/vendor/radio/copy_complete
 
 #check build variant for printk logging
 #current default minimum boot-time-default
