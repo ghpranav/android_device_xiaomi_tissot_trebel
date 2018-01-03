@@ -183,6 +183,7 @@ LOCAL_SHARED_LIBRARIES:= \
          libcutils libdl libmmcamera_interface
 
 LOCAL_MODULE_TAGS := optional
+LOCAL_PROPRIETARY_MODULE := true
 
 LOCAL_32_BIT_ONLY := $(BOARD_QTI_CAMERA_32BIT_ONLY)
 
